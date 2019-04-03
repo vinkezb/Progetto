@@ -8,11 +8,11 @@ import { MenuItem } from '../menu-item';
 })
 export class MenuComponent implements OnInit {
   menulist : MenuItem[] = [
-    {id:1, description: 'Homepage', selected: false, },
-    {id:2, description: 'Lista', selected: false, },
-    {id:3, description: 'Cards', selected: false, },
-    {id:4, description: 'Feedback', selected: false, },
-    {id:1, description: 'Esci', selected: false, },
+    {id:1, description: 'Homepage', selected: false, endpoint:'/home'},
+    {id:2, description: 'Lista', selected: false, endpoint: '/lista' },
+    {id:3, description: 'Cards', selected: false, endpoint: '/cards' },
+    {id:4, description: 'Feedback', selected: false, endpoint: '/feedback' },
+    {id:1, description: 'Esci', selected: false, endpoint:'/' },
   ]
 
   constructor() { }
