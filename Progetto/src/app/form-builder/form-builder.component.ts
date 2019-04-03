@@ -13,8 +13,8 @@ export class FormBuilderComponent implements OnInit {
 
    this.myform = this.fb.group({
     username :['', Validators.required],
-    psw :[''],
-    email :['']
+    psw :['',Validators.required],
+    email :['',Validators.required]
   });
 }
 ngOnInit() {  }
