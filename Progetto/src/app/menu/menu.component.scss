@@ -11,3 +11,16 @@ a{
     text-decoration: none;
     color: rgb(105, 189, 228);
 }
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    margin-left: 10px;
+    
+  }
+
+  .item-a {
+    grid-column-end: span 1;
+    grid-row-end: span 1;
+    width: 50%;
+  }

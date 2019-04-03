@@ -1,6 +1,9 @@
+<div class="container">
 <ul class="menu">
   <li *ngFor="let item of menulist" class="item">
     <a [routerLink]="[item.endpoint]" routerLinkActive="router-link-active" >{{item.description}}</a>
   </li>
 </ul>
+    <img class="item-a" src="assets/images/armani-logo.png" alt="logo">
+</div>
 
