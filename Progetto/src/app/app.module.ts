@@ -10,6 +10,7 @@ import { ListComponent } from './list/list.component';
 import { RegistratiComponent } from './registrati/registrati.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { CardsComponent } from './cards/cards.component';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CardsComponent } from './cards/cards.component';
     ListComponent,
     RegistratiComponent,
     FeedbackComponent,
-    CardsComponent
+    CardsComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
