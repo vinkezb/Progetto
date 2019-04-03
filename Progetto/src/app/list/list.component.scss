@@ -1,0 +1,35 @@
+.container {
+    list-style: none;
+}
+
+.itemName {
+    font-weight: bolder;
+}
+
+.itemContainer {
+    margin-top: 30px;
+}
+
+img {
+    width: 100px;
+}
+
+.column {
+    display: inline-block;
+}
+
+.left {
+    width: 10%;
+}
+
+.right {
+    width: 20%;
+}
+
+.middle {
+    width: 55%;
+}
+
+.icon {
+    display: inline-flex;
+}
