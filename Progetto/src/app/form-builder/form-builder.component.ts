@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-form-builder',
@@ -6,10 +8,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./form-builder.component.sass']
 })
 export class FormBuilderComponent implements OnInit {
+  myform:FormGroup;
 
-  constructor() { }
+  constructor( private fb:FormBuilder) { 
 
-  ngOnInit() {
+   this.myform = this.fb.group({
+    username :[''],
+    psw :[''],
+    email :['']
+  });
+}
+ngOnInit() {  }
+
+  Login(){
+    console.log(this.myform.value);
   }
+ 
 
 }

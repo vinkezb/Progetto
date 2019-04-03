@@ -7,17 +7,14 @@ import { FormGroup,FormControl } from "@angular/forms";
   styleUrls: ['./form-group.component.sass']
 })
 export class FormGroupComponent implements OnInit {
+  constructor() { }
 
+  ngOnInit() {
+  }
 groupform = new FormGroup({
   username : new FormControl(''),
   psw : new FormControl(''),
   email : new FormControl(''),
   phone : new FormControl('')
-})
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+});
 }

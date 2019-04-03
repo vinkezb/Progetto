@@ -12,7 +12,7 @@ export class MenuComponent implements OnInit {
     {id:2, description: 'Lista', selected: false, endpoint: '/lista' },
     {id:3, description: 'Cards', selected: false, endpoint: '/cards' },
     {id:4, description: 'Feedback', selected: false, endpoint: '/feedback' },
-    {id:1, description: 'Login', selected: false, endpoint:'/login' },
+    {id:5, description: 'Login', selected: false, endpoint:'/login' },
   ]
 
   constructor() { }
