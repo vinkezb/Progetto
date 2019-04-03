@@ -2,12 +2,21 @@
     form-builder works!
 </p>
 
-<form (ngSubmit)="Login()" [formGroup]="myform">
-    <label>Username:  <input  type='text' name = 'username' id= 'username' formControlName='username'></label> <br>
-    <label>Password:  <input  type='password' name = 'psw' id= 'psw' formControlName='psw'></label> <br>
-    <label>Email:  <input type ="email" name = 'email' id= 'email' formControlName='email'></label> <br>
-    <button>Submit</button>
-</form>
 
-<p> Input : {{username.value}}</p>
-<p> Input : {{psw.value}}</p>
+<div class="form-group">
+    <form (ngSubmit)="Login()" [formGroup]="myform">
+        <label>Username:</label>
+        <input class="form-control" type='text' name='username' id='username' formControlName='username'>
+        <div *ngIf="myform.controls['username'].invalid && (myform.controls['username'].dirty || myform.controls['username'].touched)" class="alert alert-danger">
+            <div *ngIf="myform.controls['username'].errors.required">
+                Name is required.
+            </div>
+        </div>
+
+        <label>Password:  <input  type='password' name = 'psw' id= 'psw' formControlName='psw'></label> <br>
+        <label>Email:  <input type ="email" name = 'email' id= 'email' formControlName='email'></label> <br>
+        <button>Submit</button>
+    </form>
+
+    <p> Input : {{myform.username.value}}</p>
+    <p> Input : {{psw.value}}</p>
