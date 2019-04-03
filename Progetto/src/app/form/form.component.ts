@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ReactiveFormsModule } from "@angular/forms";
+import { ReactiveFormsModule,FormControl } from "@angular/forms";
 
 @Component({
   selector: 'app-form',
@@ -7,6 +7,12 @@ import { ReactiveFormsModule } from "@angular/forms";
   styleUrls: ['./form.component.sass']
 })
 export class FormComponent implements OnInit {
+
+  username = new FormControl('');
+  psw = new FormControl('');
+  email = new FormControl('');
+
+
 
   constructor() { }
 

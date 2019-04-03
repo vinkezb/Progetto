@@ -1,0 +1,9 @@
+<form (ngSubmit)="inviaForm()" [formGroup]="groupform">
+    <label>Username:  <input  type='text' [formControl]='username'></label> <br>
+    <label>Password:  <input  type='password' [formControl]='psw'></label> <br>
+    <label>Email:  <input type ="email" [formControl]='email'></label> <br>
+    <button>Submit</button>
+</form>
+
+<p> Input : {{username.value}}</p>
+<p> Input : {{psw.value}}</p>
