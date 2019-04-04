@@ -1,10 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { ItemList } from '../model/ItemList';
-import { NgIf } from '@angular/common';
+import { IconModel } from '../model/IconModel';
+
+
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
-  styleUrls: ['./list.component.scss'],
+  styleUrls: ['./list.component.scss']
 })
   
 export class ListComponent implements OnInit {
@@ -16,7 +18,6 @@ export class ListComponent implements OnInit {
     {itemImage: "round_metal.jpg", itemName: "Nome dell'item4", itemDescription: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. ", isFavorite: true},
     {itemImage: "striped_percey.jpg", itemName: "Nome dell'item5", itemDescription: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. ", isFavorite: false}
   ]
-
 
   constructor() { 
   }
@@ -30,8 +31,11 @@ export class ListComponent implements OnInit {
     item.isFavorite  = !item.isFavorite;
   }
 
-  moreIcon(){
-    
+  shareItem(item: ItemList) {
+
   }
 
+  moreIcon() {
+    
+  }
 }

@@ -12,6 +12,7 @@ import { ListComponent } from './list/list.component';
 import { RegistratiComponent } from './registrati/registrati.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { CardsComponent } from './cards/cards.component';
+import { MaterialModule } from './model/MaterialModule';
 
 @NgModule({
   declarations: [
@@ -28,9 +29,11 @@ import { CardsComponent } from './cards/cards.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    MatIconModule
+    MatIconModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
