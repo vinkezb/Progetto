@@ -19,7 +19,7 @@ p{
     margin-top: 70px;
 }
 
-.container{
+.container2{
     @include display-grid((1fr 1fr), (100px 1fr));
     margin-left: 84px;
 
@@ -28,5 +28,5 @@ p{
 .occhiali{
     @include grid-column(2);
     @include grid-row(2);
-    width: 111%;
+    width: 80%;
 }
