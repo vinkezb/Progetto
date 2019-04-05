@@ -1,6 +1,5 @@
 import { Component, OnInit} from '@angular/core';
 import { ItemList } from '../model/ItemList';
-import { IconModel } from '../model/IconModel';
 
 
 @Component({
@@ -33,9 +32,5 @@ export class ListComponent implements OnInit {
 
   shareItem(item: ItemList) {
 
-  }
-
-  moreIcon() {
-    
   }
 }
