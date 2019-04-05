@@ -1,3 +1,5 @@
+<input placeholder="Cerca" type="search" (search)="search()">
+
 <ul class="container">
     <li *ngFor="let item of itemList" class="itemContainer">
         <div class="column left">
@@ -23,7 +25,20 @@
                 </button>
             </div>
             <div class="icon more">
-                <button (click)="moreIcon()"><mat-icon>more_vert</mat-icon></button>
+                <button mat-icon-button [matMenuTriggerFor]="menu">
+                            <mat-icon>more_vert</mat-icon>
+                          </button>
+                <mat-menu #menu="matMenu" xPosition="before">
+                    <button mat-menu-item>
+                              <mat-icon>link</mat-icon>
+                              <span>Scopri di più</span>
+                            </button>
+                    <button mat-menu-item>
+                              <mat-icon>clear</mat-icon>
+                              <span>Nascondi</span>
+                            </button>
+                </mat-menu>
+                <!--<button (click)="moreIcon()"><mat-icon>more_vert</mat-icon></button>-->
             </div>
         </div>
     </li>
