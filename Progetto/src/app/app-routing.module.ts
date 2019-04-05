@@ -5,14 +5,19 @@ import { ListComponent } from './list/list.component';
 import { CardsComponent } from './cards/cards.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { RoutingEnum } from './models/routing-enum';
 
-const routes: Routes = [
-  {path:'home', component:HomeComponent},
+const routes: Routes = [{
+  path: RoutingEnum.home, children: [
+  {path:'home', component:HomeComponent },
   {path:'lista', component: ListComponent},
   {path:'cards', component: CardsComponent},
   {path:'feedback', component: FeedbackComponent},
-  {path:'login', component: LoginComponent}
-];
+  {path:'login', component: LoginComponent},
+  {path:'register', component: RegisterComponent}
+
+]}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
