@@ -15,6 +15,8 @@ import { FormComponent } from './form/form.component';
 import { FormGroupComponent } from './form-group/form-group.component';
 import { FormBuilderComponent } from './form-builder/form-builder.component';
 import { RegisterComponent } from './register/register.component';
+import { FormFeedbackComponent } from './form-feedback/form-feedback.component';
+import { FormRegisterComponent } from './form-register/form-register.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { RegisterComponent } from './register/register.component';
     FormGroupComponent,
     FormBuilderComponent,
     RegisterComponent,
+    FormFeedbackComponent,
+    FormRegisterComponent,
   ],
   imports: [
     BrowserModule,

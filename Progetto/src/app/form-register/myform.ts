@@ -1,4 +1,4 @@
-export interface Form{
+export interface myForm{
     nome: string;
     opzione: string;
 }
