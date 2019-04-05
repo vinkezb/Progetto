@@ -12,10 +12,10 @@ a{
     color: rgb(105, 189, 228);
 }
 
-.container {
+.container1 {
     display: grid;
     grid-template-columns: 1fr 200px;
-    
+    margin-left: 10px;
   }
 
   .item-a {
