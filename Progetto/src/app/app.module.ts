@@ -15,6 +15,9 @@ import { CardsComponent } from './cards/cards.component';
 import { MaterialModule } from './model/MaterialModule';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MatMenuModule } from '@angular/material';
+import { ItemListService } from './Services/item-list.service';
+import { DetailComponent } from './detail/detail.component';
+import { SearchListComponent } from './search-list/search-list.component';
 
 
 @NgModule({
@@ -26,7 +29,9 @@ import { MatMenuModule } from '@angular/material';
     ListComponent,
     RegistratiComponent,
     FeedbackComponent,
-    CardsComponent
+    CardsComponent,
+    DetailComponent,
+    SearchListComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +42,7 @@ import { MatMenuModule } from '@angular/material';
     MaterialModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [ItemListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
