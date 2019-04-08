@@ -1,33 +1,33 @@
 <input type="text" [(ngModel)]="query" name="name">
 <ul>
-    <li *ngFor="let item of itemList | startsWith : query">{{item.itemName}}</li>
+    <li *ngFor="let item of itemList">{{item.itemName}}</li>
 </ul>
 
-<ul class="container">
-    <li *ngFor="let item of itemList" class="itemContainer">
-        <div class="column left">
-            <img src="assets/imgItem/{{item.itemImage}}" class="imageContainer">
+<ul class=" container ">
+    <li *ngFor="let item of itemList " class="itemContainer ">
+        <div class="column left ">
+            <img src="assets/imgItem/{{item.itemImage}} " class="imageContainer ">
         </div>
-        <div class="column middle" id="textContainer">
-            <a class="itemName">{{item.itemName}}</a>
+        <div class="column middle " id="textContainer ">
+            <a class="itemName ">{{item.itemName}}</a>
             <br>
-            <a class="itemDescription">{{item.itemDescription}}</a>
+            <a class="itemDescription ">{{item.itemDescription}}</a>
         </div>
-        <div class="column right">
-            <div class="icon heart">
-                <button (click)="isYourFavorite(item)">
-                    <mat-icon *ngIf="item.isFavorite; else unfavorite">favorite</mat-icon>
+        <div class="column right ">
+            <div class="icon heart ">
+                <button (click)="isYourFavorite(item) ">
+                    <mat-icon *ngIf="item.isFavorite; else unfavorite ">favorite</mat-icon>
                     <ng-template #unfavorite>
                         <mat-icon>favorite_border</mat-icon>
                     </ng-template>
                 </button>
             </div>
-            <div class="icon share">
-                <button (click)="shareItem(item)">
+            <div class="icon share ">
+                <button (click)="shareItem(item) ">
                     <mat-icon>share</mat-icon>
                 </button>
             </div>
-            <div class="icon more">
+            <div class="icon more ">
                 <button mat-icon-button [matMenuTriggerFor]="menu">
                             <mat-icon>more_vert</mat-icon>
                           </button>

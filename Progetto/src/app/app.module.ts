@@ -14,6 +14,7 @@ import { FeedbackComponent } from './feedback/feedback.component';
 import { CardsComponent } from './cards/cards.component';
 import { MaterialModule } from './model/MaterialModule';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MatMenuModule } from '@angular/material';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     AppRoutingModule,
     FormsModule,
     MatIconModule,
+    MatMenuModule,
     MaterialModule,
     BrowserAnimationsModule
   ],
