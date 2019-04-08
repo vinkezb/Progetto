@@ -1,3 +1,16 @@
-<p>
-  detail works!
-</p>
+<div *ngIf="item">
+    <div class="detailHeader">
+        <button (click)="goBackToList() ">
+        <mat-icon>arrow_back</mat-icon>
+      </button> {{item.itemName}}
+    </div>
+
+    <div class="detailBody">
+
+        <h1>{{item.itemName | uppercase}}</h1>
+        <div>{{item.itemDescription}}</div>
+        <div><img src="assets/imgItem/{{item.itemImage}} "></div>
+
+
+    </div>
+</div>
