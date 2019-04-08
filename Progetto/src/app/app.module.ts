@@ -1,8 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { MatIconModule } from "@angular/material/icon";
-import { NgModule} from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA} from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,7 +25,6 @@ import { FormBuilderComponent } from './form-builder/form-builder.component';
 import { RegisterComponent } from './register/register.component';
 import { FormFeedbackComponent } from './form-feedback/form-feedback.component';
 import { FormRegisterComponent } from './form-register/form-register.component';
-import { NO_ERRORS_SCHEMA } from '@angular/compiler/src/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
@@ -57,11 +55,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MatMenuModule,
     MaterialModule,
     BrowserAnimationsModule,
-    MatGridListModule
+    MatGridListModule,
+    ReactiveFormsModule
   ],
   providers: [ItemListService,
     NgbModule,
-    ReactiveFormsModule,
     FormsModule
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
