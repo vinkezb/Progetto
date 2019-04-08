@@ -44,9 +44,9 @@
   }
 
   .icone{
-    @include display-grid((200px 1fr), (79px 1fr));
-    margin-bottom: 10px;
+    @include display-grid((115px 1fr), (79px 1fr));
     font-size: 10px;
+    margin-top: 103px;
   }
 
   .text-center-center-block{
@@ -57,4 +57,7 @@
   .copyright{
     @include grid-column(2);
     @include grid-row(2);
+    font-size: 10px;
+    align-self: center;
+    margin: 0;
   }
