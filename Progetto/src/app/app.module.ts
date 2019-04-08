@@ -14,7 +14,7 @@ import { FeedbackComponent } from './feedback/feedback.component';
 import { CardsComponent } from './cards/cards.component';
 import { MaterialModule } from './model/MaterialModule';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { MatMenuModule } from '@angular/material';
+import { MatMenuModule, MatGridListModule } from '@angular/material';
 import { ItemListService } from './Services/item-list.service';
 import { DetailComponent } from './detail/detail.component';
 
@@ -38,7 +38,8 @@ import { DetailComponent } from './detail/detail.component';
     MatIconModule,
     MatMenuModule,
     MaterialModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatGridListModule
   ],
   providers: [ItemListService],
   bootstrap: [AppComponent]

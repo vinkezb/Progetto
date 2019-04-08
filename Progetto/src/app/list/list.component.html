@@ -29,11 +29,11 @@
                             <mat-icon>more_vert</mat-icon>
                           </button>
                 <mat-menu #menu="matMenu" xPosition="before">
-                    <button mat-menu-item>
+                    <button mat-menu-item (click)="goToItemDetail(item.itemId)">
                               <mat-icon>link</mat-icon>
                               <span>Scopri di più</span>
                             </button>
-                    <button mat-menu-item>
+                    <button mat-menu-item (click)="hideItem(item.itemId)">
                               <mat-icon>clear</mat-icon>
                               <span>Nascondi</span>
                             </button>

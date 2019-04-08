@@ -1,6 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import { ItemList } from '../model/ItemList';
 import { ItemListService } from '../Services/item-list.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -11,11 +12,12 @@ import { ItemListService } from '../Services/item-list.service';
   
 export class ListComponent implements OnInit {
 
-  constructor(private itemListService: ItemListService) { 
+  constructor(private itemListService: ItemListService, private router: Router) { 
   }
 
   listOfItems: Array<ItemList>
   filteredList: Array<ItemList>
+  item: ItemList
 
   ngOnInit() {
     this.listOfItems = this.itemListService.getListOfItems();
@@ -34,5 +36,13 @@ export class ListComponent implements OnInit {
    return this.filteredList=this.listOfItems.filter(item =>{
       return !input || item.itemName.toLowerCase().indexOf(input.toLowerCase()) !== -1;
     })
+  }
+
+  goToItemDetail(itemId: number) {
+    this.router.navigateByUrl('/detail/'+itemId);
+    return true;
+  }
+
+  hideItem(itemId: number) {
   }
 }

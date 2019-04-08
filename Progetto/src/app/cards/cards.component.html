@@ -1,3 +1,10 @@
-<p>
-  cards works!
-</p>
+<mat-grid-list cols="4">
+    <mat-grid-tile *ngFor="let item of filteredList" [colspan]="1" [rowspan]="1">
+        <ul>
+            <li id="image"><img src="assets/imgItem/{{item.itemImage}} " class="imageContainer "></li>
+            <li id="name"><a class="itemName">{{item.itemName | uppercase}}</a></li>
+            <br>
+            <li id="description"><a class="itemDescription">{{item.itemDescription}}</a></li>
+        </ul>
+    </mat-grid-tile>
+</mat-grid-list>
