@@ -1,0 +1,63 @@
+@import "../../assets/scss/mixins";
+
+ #lab_social_icon_footer a {
+    color: white;
+  }
+  
+  #lab_social_icon_footer .social:hover {
+      transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+  }
+  
+  #lab_social_icon_footer .social {
+    -webkit-transform: scale(0.8);
+    /* Browser Variations: */
+    transform: scale(0.8);
+
+    -moz-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+  }
+  /*
+      Multicoloured Hover Variations
+  */
+  
+  #lab_social_icon_footer #social-fb:hover {
+    color: #3B5998;
+  }
+  
+  #lab_social_icon_footer #social-tw:hover {
+    color: #4099FF;
+  }
+  
+  #lab_social_icon_footer #social-gp:hover {
+    color: #d34836;
+  }
+  
+  #lab_social_icon_footer #social-em:hover {
+    color: #f39c12;
+  }
+
+  .icone{
+    @include display-grid((115px 1fr), (79px 1fr));
+    font-size: 10px;
+    margin-top: 103px;
+  }
+
+  .text-center-center-block{
+    @include grid-column(1);
+    @include grid-row(2);
+  }
+
+  .copyright{
+    @include grid-column(2);
+    @include grid-row(2);
+    font-size: 10px;
+    align-self: center;
+    margin: 0;
+  }
