@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-form-feedback',
   templateUrl: './form-feedback.component.html',
-  styleUrls: ['./form-feedback.component.sass']
+  styleUrls: ['./form-feedback.component.scss']
 })
 export class FormFeedbackComponent implements OnInit {
   myform:FormGroup;
