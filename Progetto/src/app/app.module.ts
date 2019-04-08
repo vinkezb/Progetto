@@ -13,7 +13,8 @@ import { RegistratiComponent } from './registrati/registrati.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { CardsComponent } from './cards/cards.component';
 import { MaterialModule } from './model/MaterialModule';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [

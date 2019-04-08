@@ -1,4 +1,7 @@
-<input placeholder="Cerca" type="search" (search)="search()">
+<input type="text" [(ngModel)]="query" name="name">
+<ul>
+    <li *ngFor="let item of itemList | startsWith : query">{{item.itemName}}</li>
+</ul>
 
 <ul class="container">
     <li *ngFor="let item of itemList" class="itemContainer">
