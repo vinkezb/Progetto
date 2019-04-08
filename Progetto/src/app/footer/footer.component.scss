@@ -44,9 +44,8 @@
   }
 
   .icone{
-    @include display-grid((115px 1fr), (79px 1fr));
+    @include display-grid((115px 1fr), (185px 1fr));
     font-size: 10px;
-    margin-top: 103px;
   }
 
   .text-center-center-block{
