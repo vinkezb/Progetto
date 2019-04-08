@@ -19,4 +19,10 @@ export class ItemListService {
   getListOfItems() : Array<ItemList> {
     return this.itemList;
   }
+
+  getItem(itemId): ItemList {
+    return this.itemList.find(item => {
+      return item.itemId === itemId;
+    })
+  }
 }
