@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-form-builder',
   templateUrl: './form-builder.component.html',
-  styleUrls: ['./form-builder.component.sass']
+  styleUrls: ['./form-builder.component.scss']
 })
 export class FormBuilderComponent implements OnInit {
   myform:FormGroup;
