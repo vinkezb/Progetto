@@ -14,12 +14,12 @@ export class ListComponent implements OnInit {
   constructor(private itemListService: ItemListService) { 
   }
 
-  listOfItems: Array<ItemList>;
-  filteredList: Array<ItemList>;
+  listOfItems: Array<ItemList>
+  filteredList: Array<ItemList>
 
   ngOnInit() {
     this.listOfItems = this.itemListService.getListOfItems();
-    this.filteredList = this.itemListService.getListOfItems();
+    this.filteredList=this.itemListService.getListOfItems();
   }
 
   isYourFavorite(item: ItemList) {

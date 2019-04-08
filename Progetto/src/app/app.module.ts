@@ -17,7 +17,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MatMenuModule } from '@angular/material';
 import { ItemListService } from './Services/item-list.service';
 import { DetailComponent } from './detail/detail.component';
-import { SearchListComponent } from './search-list/search-list.component';
 
 
 @NgModule({
@@ -30,8 +29,7 @@ import { SearchListComponent } from './search-list/search-list.component';
     RegistratiComponent,
     FeedbackComponent,
     CardsComponent,
-    DetailComponent,
-    SearchListComponent
+    DetailComponent
   ],
   imports: [
     BrowserModule,
