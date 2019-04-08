@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from '../menu-item';
+import { RoutingEnum } from 'src/app/models/routing-enum';
 
 @Component({
   selector: 'app-menu',
@@ -8,12 +9,12 @@ import { MenuItem } from '../menu-item';
 })
 export class MenuComponent implements OnInit {
   menulist : MenuItem[] = [
-    {id:1, description: 'Homepage', selected: false, endpoint:'/home'},
-    {id:2, description: 'Lista', selected: false, endpoint: '/lista' },
-    {id:3, description: 'Cards', selected: false, endpoint: '/cards' },
-    {id:4, description: 'Feedback', selected: false, endpoint: '/feedback' },
-    {id:4, description: 'Profile', selected: false, endpoint: '/profile' },
-    {id:1, description: 'Esci', selected: false, endpoint:'/' },
+    {id:1, description: 'Homepage', selected: false, endpoint: RoutingEnum.home+'/home'},
+    {id:2, description: 'Lista', selected: false, endpoint: '/'+ RoutingEnum.home +'/'+ RoutingEnum.lista  },
+    {id:3, description: 'Cards', selected: false, endpoint: '/'+ RoutingEnum.home +'/'+ RoutingEnum.cards  },
+    {id:4, description: 'Feedback', selected: false, endpoint: '/'+ RoutingEnum.home +'/'+ RoutingEnum.feedback  },
+    {id:5, description: 'Login', selected: false, endpoint:'/'+ RoutingEnum.home+'/'+ RoutingEnum.login  },
+    
   ]
 
   constructor() { }
