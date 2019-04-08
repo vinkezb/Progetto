@@ -1,6 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import { ItemList } from '../model/ItemList';
-import { FormsModule } from '@angular/forms';
+import { ItemListService } from '../Services/item-list.service';
 
 
 @Component({
@@ -11,21 +11,15 @@ import { FormsModule } from '@angular/forms';
   
 export class ListComponent implements OnInit {
 
-  itemList: ItemList[]=[
-    {itemId: 1, itemImage: "aviator.jpg", itemName: "Nome dell'item1", itemDescription: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. ", isFavorite: false},
-    {itemId: 2, itemImage: "half_rim.jpg", itemName: "Nome dell'item2", itemDescription: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. ", isFavorite: false},
-    {itemId: 3, itemImage: "Peak_BlackIce.jpg", itemName: "Nome dell'item3", itemDescription: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. ", isFavorite: false},
-    {itemId: 4, itemImage: "round_metal.jpg", itemName: "Nome dell'item4", itemDescription: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. ", isFavorite: true},
-    {itemId: 5, itemImage: "striped_percey.jpg", itemName: "Nome dell'item5", itemDescription: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. ", isFavorite: false}
-  ]
-
-  constructor() { 
+  constructor(private itemListService: ItemListService) { 
   }
 
-  query:string = '';
- 
+  listOfItems: Array<ItemList>;
+  filteredList: Array<ItemList>;
 
   ngOnInit() {
+    this.listOfItems = this.itemListService.getListOfItems();
+    this.filteredList = this.itemListService.getListOfItems();
   }
 
   isYourFavorite(item: ItemList) {
@@ -34,5 +28,11 @@ export class ListComponent implements OnInit {
 
   shareItem(item: ItemList) {
 
+  }
+
+  filterList(input: string) {
+   return this.filteredList=this.listOfItems.filter(item =>{
+      return !input || item.itemName.toLowerCase().indexOf(input.toLowerCase()) !== -1;
+    })
   }
 }

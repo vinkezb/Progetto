@@ -1,10 +1,7 @@
-<input type="text" [(ngModel)]="query" name="name">
-<ul>
-    <li *ngFor="let item of itemList">{{item.itemName}}</li>
-</ul>
+<input type="text" #input (keyup)='filterList(input.value)'>
 
 <ul class=" container ">
-    <li *ngFor="let item of itemList " class="itemContainer ">
+    <li *ngFor="let item of filteredList " class="itemContainer ">
         <div class="column left ">
             <img src="assets/imgItem/{{item.itemImage}} " class="imageContainer ">
         </div>
