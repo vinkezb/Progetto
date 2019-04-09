@@ -1,7 +1,39 @@
 .container {
-    width: 30%;
+    color: white;
+    display: grid;
 }
 
 img {
     max-width: 100%;
+}
+
+.backArrow {
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+
+.detailHeader {
+    color: white;
+}
+
+.itemName {
+    font-size: 2vw;
+}
+
+.left {
+    display: inline-block;
+    max-width: 30%;
+    padding: 1%;
+}
+
+.image {
+    display: inline-block;
+    max-width: 30%;
+}
+
+.right {
+    display: inline-block;
+    max-width: 20%;
+    padding: 2%;
 }

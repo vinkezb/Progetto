@@ -1,20 +1,23 @@
 <div *ngIf="item">
     <div class="detailHeader">
-        <button (click)="goBackToList() ">
+        <button (click)="goBackToList()" class="backArrow">
         <mat-icon>arrow_back</mat-icon>
-      </button> {{item.itemName}}
+      </button>{{item.itemName}}
     </div>
 
     <div class="detailBody">
         <div class="container left">
-            <h1>{{item.itemName | uppercase}}</h1>
-            <div>{{item.itemDescription}}</div>
+            <div class="itemName">
+                <h1>{{item.itemName | uppercase}}</h1>
+            </div>
+            <div class="itemDescription">{{item.itemDescription}}</div>
+
         </div>
         <div class="container image">
             <div><img src="assets/imgItem/{{item.itemImage}} "></div>
         </div>
         <div class="container right">
-            <div>{{item.itemDescription}}</div>
+            <div>this is the {{item.itemDescription}}</div>
         </div>
     </div>
 </div>
