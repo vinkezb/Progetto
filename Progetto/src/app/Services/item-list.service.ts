@@ -13,7 +13,7 @@ export class ItemListService {
     {itemId: 4, itemImage: "michael_kors.jpg", itemName: "Michaell Kors", itemDescription: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. ", isFavorite: true},
     {itemId: 5, itemImage: "oakley.jpg", itemName: "Oakley", itemDescription: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. ", isFavorite: false},
     {itemId: 6, itemImage: "prada.jpg", itemName: "Prada", itemDescription: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. ", isFavorite: false},
-    {itemId: 7, itemImage: "ray-ban.jpg", itemName: "Ray-ban", itemDescription: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. ", isFavorite: false}
+    {itemId: 7, itemImage: "ray-ban.jpg", itemName: "Ray-ban", itemDescription: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. ", isFavorite: false},
   ]
 
   constructor() { }
