@@ -1,7 +1,6 @@
 .gridList {
     max-width: 95%;
     left: 2.5%;
-    cursor: pointer;
 }
 
 img {
@@ -12,8 +11,8 @@ li {
     list-style: none;
 }
 
-#name {
-    font-weight: bolder;
+li#name {
+    font-size: large;
 }
 
 img {

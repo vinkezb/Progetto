@@ -1,10 +1,26 @@
 <mat-grid-list cols="4" [gutterSize]="'10px'" class="gridList">
-    <mat-grid-tile *ngFor=" let item of filteredList " [colspan]="1" (click)="goToItemDetail(item.itemId)">
+    <mat-grid-tile *ngFor=" let item of filteredList " [colspan]="1">
         <ul>
             <li id="image "><img src="assets/imgItem/{{item.itemImage}} " class="imageContainer "></li>
             <li id="name "><a class="itemName ">{{item.itemName | uppercase}}</a></li>
             <br>
             <li id="description "><a class="itemDescription ">{{item.itemDescription}}</a></li>
+            <div class="icon more ">
+                <button mat-icon-button [matMenuTriggerFor]="menu">
+                                    <mat-icon>more_horiz</mat-icon>
+                                  </button>
+                <mat-menu #menu="matMenu" xPosition="before">
+                    <button mat-menu-item (click)="goToItemDetail(item.itemId)">
+                                      <mat-icon>link</mat-icon>
+                                      <span>Scopri di più</span>
+                                    </button>
+                    <button mat-menu-item (click)="hideItem(item.isHidden)">
+                                      <mat-icon>clear</mat-icon>
+                                      <span>Nascondi</span>
+                                    </button>
+                </mat-menu>
+            </div>
         </ul>
+
     </mat-grid-tile>
 </mat-grid-list>
