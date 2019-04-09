@@ -43,6 +43,4 @@ export class ListComponent implements OnInit {
     return true;
   }
 
-  hideItem(itemId: number) {
-  }
 }

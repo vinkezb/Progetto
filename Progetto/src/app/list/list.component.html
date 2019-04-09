@@ -2,7 +2,7 @@
 </div>
 
 <ul class=" container ">
-    <li *ngFor="let item of filteredList " class="itemContainer ">
+    <li *ngFor="let item of filteredList " class="itemContainer">
         <div class="column left ">
             <img src="assets/imgItem/{{item.itemImage}} " class="imageContainer ">
         </div>
@@ -34,7 +34,7 @@
                               <mat-icon>link</mat-icon>
                               <span>Scopri di più</span>
                             </button>
-                    <button mat-menu-item (click)="hideItem(item.itemId)">
+                    <button mat-menu-item (click)="hideItem(item.isHidden)">
                               <mat-icon>clear</mat-icon>
                               <span>Nascondi</span>
                             </button>
