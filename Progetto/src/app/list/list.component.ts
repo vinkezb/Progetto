@@ -39,7 +39,7 @@ export class ListComponent implements OnInit {
   }
 
   goToItemDetail(itemId: number) {
-    this.router.navigateByUrl('/detail/'+itemId);
+    this.router.navigateByUrl('/index/detail/'+itemId);
     return true;
   }
 
