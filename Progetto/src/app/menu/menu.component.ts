@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from '../menu-item';
-import { RoutingEnum } from 'src/app/models/routing-enum';
+import { RoutingEnum } from 'src/app/model/routing-enum';
 
 @Component({
   selector: 'app-menu',
