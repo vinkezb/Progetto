@@ -4,5 +4,5 @@ export class ItemList {
     itemName: string;
     itemDescription: string;
     isFavorite: boolean;
-    isHidden: boolean;
+    isShown: boolean;
 }

@@ -43,4 +43,7 @@ export class ListComponent implements OnInit {
     return true;
   }
 
+  hideItem(item: ItemList){
+    item.isShown=false;
+  }
 }
