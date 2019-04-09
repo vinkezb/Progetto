@@ -1,20 +1,21 @@
-.item{
+.item {
     padding-left: 40px;
-    padding-top: 25px; 
+    padding-top: 25px;
     list-style: none;
 }
 
-.menu{
+.menu {
     display: flex;
     margin: 0;
 }
-a{
+
+a {
     text-decoration: none;
     color: white;
 }
 
-a:hover{
-    color:white;
+a:hover {
+    color: white;
     text-decoration: none;
 }
 
@@ -22,10 +23,10 @@ a:hover{
     display: grid;
     grid-template-columns: 1fr 200px;
     margin-left: 10px;
-  }
+}
 
-  .item-a {
+.item-a {
     grid-column-end: span 1;
     grid-row-end: span 1;
     width: 50%;
-  }
+}

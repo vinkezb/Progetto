@@ -12,6 +12,7 @@ import { RoutingEnum } from './models/routing-enum';
 
 const routes: Routes = [{
   path: RoutingEnum.home, children: [
+    { path: 'index', component: HomeComponent},
     { path: 'lista', component: ListComponent },
     { path: 'cards', component: CardsComponent },
     { path: 'feedback', component: FeedbackComponent },
