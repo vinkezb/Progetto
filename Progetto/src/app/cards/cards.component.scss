@@ -11,8 +11,9 @@ li {
     list-style: none;
 }
 
-li#name {
-    font-size: large;
+.itemName {
+    font-size: larger;
+    font-weight: bolder;
 }
 
 img {
