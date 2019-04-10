@@ -1,9 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
-import { AlertModule } from 'ngx-bootstrap';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { MatIconModule } from "@angular/material/icon";
+import { NgModule, NO_ERRORS_SCHEMA} from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +11,12 @@ import { LoginComponent } from './login/login.component';
 import { ListComponent } from './list/list.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { CardsComponent } from './cards/cards.component';
+import { MaterialModule } from './model/MaterialModule';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MatMenuModule, MatGridListModule } from '@angular/material';
+import { ItemListService } from './Services/item-list.service';
+import { DetailComponent } from './detail/detail.component';
+
 import { ProfileComponent } from './profile/profile.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormComponent } from './form/form.component';
@@ -21,6 +25,7 @@ import { FormBuilderComponent } from './form-builder/form-builder.component';
 import { RegisterComponent } from './register/register.component';
 import { FormFeedbackComponent } from './form-feedback/form-feedback.component';
 import { FormRegisterComponent } from './form-register/form-register.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -31,6 +36,7 @@ import { FormRegisterComponent } from './form-register/form-register.component';
     ListComponent,
     FeedbackComponent,
     CardsComponent,
+    DetailComponent,
     ProfileComponent,
     FooterComponent,
     
@@ -44,13 +50,20 @@ import { FormRegisterComponent } from './form-register/form-register.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    [AlertModule.forRoot()],
+    FormsModule,
+    MatIconModule,
+    MatMenuModule,
+    MaterialModule,
+    BrowserAnimationsModule,
+    MatGridListModule,
+    ReactiveFormsModule
+  ],
+  providers: [ItemListService,
     NgbModule,
-    ReactiveFormsModule,
     FormsModule
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

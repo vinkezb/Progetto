@@ -1,0 +1,47 @@
+.searchBar {
+    position: relative;
+    left: 45%;
+}
+
+.container {
+    list-style: none;
+    position: absolute;
+}
+
+.itemName {
+    font-weight: bolder;
+}
+
+.itemContainer {
+    margin-top: 30px;
+    background: rgba(200, 200, 200, 0.75);
+    border-radius: 30px;
+    align-items: center;
+}
+
+img {
+    max-width: 90%;
+}
+
+.column {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.left {
+    width: 18%;
+    padding: 1%;
+}
+
+.middle {
+    width: 70%;
+}
+
+.right {
+    display: inline-flex;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}

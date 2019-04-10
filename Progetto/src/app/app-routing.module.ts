@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { ListComponent } from './list/list.component';
 import { CardsComponent } from './cards/cards.component';
 import { FeedbackComponent } from './feedback/feedback.component';
+import { DetailComponent } from './detail/detail.component';
 import { ProfileComponent } from './profile/profile.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
@@ -11,14 +12,17 @@ import { RoutingEnum } from './models/routing-enum';
 
 const routes: Routes = [{
   path: RoutingEnum.home, children: [
-  {path:'home', component:HomeComponent },
-  {path:'lista', component: ListComponent},
-  {path:'cards', component: CardsComponent},
-  {path:'feedback', component: FeedbackComponent},
-  {path:'profile', component: ProfileComponent},
-  {path:'login', component: LoginComponent},
-  {path:'register', component: RegisterComponent}
-]}];
+    { path: RoutingEnum.home, component: HomeComponent},
+    { path: RoutingEnum.lista, component: ListComponent },
+    { path: RoutingEnum.cards, component: CardsComponent },
+    { path: RoutingEnum.feedback, component: FeedbackComponent },
+    { path: 'detail' + '/:itemId', component: DetailComponent },
+    { path: 'profile', component: ProfileComponent },
+    { path: RoutingEnum.register, component: RegisterComponent }
+  ]
+},
+{path: RoutingEnum.home, component: HomeComponent},
+{ path: 'login', component: LoginComponent },];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
