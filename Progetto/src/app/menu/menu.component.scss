@@ -1,3 +1,6 @@
+@import "../../assets/scss/mixins";
+
+
 .item{
     padding-left: 40px;
     padding-top: 25px; 
@@ -19,13 +22,12 @@ a:hover{
 }
 
 .container1 {
-    display: grid;
+    @include display-grid((1fr 200px), (100px 1fr));
     grid-template-columns: 1fr 200px;
     margin-left: 10px;
   }
 
   .item-a {
-    grid-column-end: span 1;
-    grid-row-end: span 1;
+    @include grid-column(2);
     width: 50%;
   }
