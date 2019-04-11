@@ -12,7 +12,7 @@
     "importHelpers": true,
     "target": "es5",
     "typeRoots": [
-      "node_modules/@include"
+      "node_modules/@files"
     ],
     "lib": [
       "es2018",

@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { MatIconModule } from "@angular/material/icon";
-import { NgModule, NO_ERRORS_SCHEMA} from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -52,13 +52,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MaterialModule,
     BrowserAnimationsModule,
     MatGridListModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule,
   ],
   providers: [ItemListService,
     NgbModule,
     FormsModule
   ],
-  schemas: [ NO_ERRORS_SCHEMA ],
+  schemas: [ NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
