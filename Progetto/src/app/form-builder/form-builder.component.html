@@ -3,7 +3,7 @@
     <h1>Accedi</h1>
     <form (ngSubmit)="Login()" [formGroup]="myform">
         <div class="textbox">
-            <input class="form-control" type='text' name='username' id='username' formControlName='username' required maxlength="16" placeholder="Nome utente">
+            <input class="form-control" [(ngModel)]="username" type='text' name='username' id='username' formControlName='username' required maxlength="16" placeholder="Nome utente">
             <div *ngIf="myform.controls['username'].invalid && (myform.controls['username'].dirty || myform.controls['username'].touched)" class="alert-danger">
                 <div *ngIf="myform.controls['username'].errors.required">
                     Name is required.
@@ -11,7 +11,7 @@
             </div>
         </div>
         <div class="textbox">
-            <input class="form-control" type='password' name='psw' id='psw' formControlName='psw' required maxlength="16" placeholder="Password">
+            <input class="form-control" [(ngModel)]="password" type='password' name='psw' id='psw' formControlName='psw' required maxlength="16" placeholder="Password">
             <div *ngIf="myform.controls['psw'].invalid && (myform.controls['psw'].dirty || myform.controls['psw'].touched)" class="alert-danger">
                 <div *ngIf="myform.controls[ 'psw'].errors.required ">
                     Password is required.
@@ -19,7 +19,7 @@
             </div>
         </div>
     </form>
-    <button type="button" (click)="Login()">Login</button>
+    <button type="button" (click)="doLogin(username.value, password.value)">Login</button>
 
     <a routerLink="/register"><button>Registrati</button></a>
 </div>

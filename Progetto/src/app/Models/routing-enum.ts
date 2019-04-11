@@ -1,5 +1,6 @@
 export enum RoutingEnum{
-    home = 'index',
+  home1='home',
+      home = 'index',
     lista = 'lista',
     cards = 'cards',
     feedback = 'feedback',

@@ -2,50 +2,47 @@
 
 <div class="form-group">
     <form (ngSubmit)="Login()" [formGroup]="myform">
-            <img src="assets/images/armani-logo.png" style="text-align:center">
-    <div class="textbox">
-        
-        <input class="form-control" type='text' name='nome' id='nome' formControlName='nome' required maxlength="16" placeholder="Nome">
-        <div *ngIf="myform.controls['nome'].invalid && (myform.controls['nome'].dirty || myform.controls['nome'].touched)" class="alert alert-danger">
-            <div *ngIf="myform.controls['nome'].errors.required">
-                inserire nome
+        <img src="assets/images/armani-logo.png" style="text-align:center">
+        <div class="textbox">
+
+            <input class="form-control" type='text' name='nome' id='nome' formControlName='nome' required maxlength="16" placeholder="Nome">
+            <div *ngIf="myform.controls['nome'].invalid && (myform.controls['nome'].dirty || myform.controls['nome'].touched)" class="alert alert-danger">
+                <div *ngIf="myform.controls['nome'].errors.required">
+                    inserire nome
+                </div>
             </div>
         </div>
-    </div>
-    <div  class="textbox">
-        <input class="form-control" type='text' name='cognome' id='cognome' formControlName='cognome' required maxlength="16" placeholder="Cognome">
-        <div *ngIf="myform.controls['cognome'].invalid && (myform.controls['cognome'].dirty || myform.controls['cognome'].touched)" class="alert alert-danger">
-            <div *ngIf="myform.controls['cognome'].errors.required">
-                inserire cognome
+        <div class="textbox">
+            <input class="form-control" type='text' name='cognome' id='cognome' formControlName='cognome' required maxlength="16" placeholder="Cognome">
+            <div *ngIf="myform.controls['cognome'].invalid && (myform.controls['cognome'].dirty || myform.controls['cognome'].touched)" class="alert alert-danger">
+                <div *ngIf="myform.controls['cognome'].errors.required">
+                    inserire cognome
+                </div>
             </div>
         </div>
-    </div> 
-    <div  class="textbox">   
-        <select>
+        <div class="textbox">
+            <select>
           <option value="" disabled selected >Sesso</option>
           <option value=option1 >Maschio</option>
           <option value=option1 >Femmina</option>
           <option value=option1 >Indeciso</option>
       </select>
-    </div>
-        <div  class="textbox">
+        </div>
+        <div class="textbox">
             <input class="form-control " type='email' name='email' id='email' formControlName='email' ngModel [email]="true" placeholder="Email">
             <div *ngIf="myform.controls[ 'email'].invalid && (myform.controls[ 'email'].dirty || myform.controls[ 'email'].touched) " class="alert-danger  ">
                 <div *ngIf="myform.controls[ 'email'].errors.required ">
                     Email is required.
                 </div>
             </div>
-        </div>  
-        <div  class="textbox">
-            <input class="form-control" type='number' name='telefono' id='telefono' formControlName='telefono'
-             required minlength="10" placeholder="Phone" maxlength="10" placeholder="Telefono">
         </div>
-             <div>
+        <div class="textbox">
+            <input class="form-control" type='telephone' name='telefono' id='telefono' formControlName='telefono' required minlength="10" placeholder="Phone" maxlength="10" placeholder="Telefono">
+        </div>
+        <div>
             <textarea name="" class="form-area" cols="30" rows="10" placeholder="Inserisci un messaggio"></textarea>
         </div>
 
     </form>
     <button type="button " (click)="Invia() ">Invia</button>
 </div>
-
-

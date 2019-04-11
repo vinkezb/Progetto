@@ -15,8 +15,7 @@ export class MenuComponent implements OnInit {
     {id:4, description: 'Feedback', selected: false, endpoint: '/'+ RoutingEnum.home +'/'+ RoutingEnum.feedback  },
     {id:5, description: 'Login', selected: false, endpoint:'/'+ RoutingEnum.login },
     {id:6, description: 'Profilo', selected: false, endpoint: '/'+ RoutingEnum.profile },
-   
-  ]
+     ]
 
   constructor() { }
 
