@@ -24,7 +24,7 @@ import { RegisterComponent } from './register/register.component';
 import { FormFeedbackComponent } from './form-feedback/form-feedback.component';
 import { FormRegisterComponent } from './form-register/form-register.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
+import { AuthGuard } from './Services/Auth-guard';
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,7 +56,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   ],
   providers: [ItemListService,
     NgbModule,
-    FormsModule
+    FormsModule,
+    AuthGuard
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   bootstrap: [AppComponent]

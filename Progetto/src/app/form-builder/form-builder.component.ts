@@ -10,6 +10,7 @@ import { RoutingEnum } from 'src/app/models/routing-enum';
 })
 export class FormBuilderComponent implements OnInit {
   myform:FormGroup;
+psw:string;
    constructor( private fb:FormBuilder) { 
 
    this.myform = this.fb.group({
@@ -19,10 +20,7 @@ export class FormBuilderComponent implements OnInit {
     telephone :['',Validators.required],
     nome:['',Validators.required],
     cognome:['',Validators.required]
-    })
-
-     
-    };
+    })    };
 
 ngOnInit() {  }
 
@@ -32,7 +30,10 @@ ngOnInit() {  }
  
   Redirect(){
     console.log("function called");
-
   }
 
+  doLogin(username: string){
+    sessionStorage.user = username;
+    sessionStorage.password = this.psw;
+  }
 }

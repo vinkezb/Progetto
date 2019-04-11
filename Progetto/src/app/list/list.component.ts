@@ -46,4 +46,8 @@ export class ListComponent implements OnInit {
   hideItem(item: ItemList){
     item.isShown=false;
   }
+
+  canNavigateForward(): boolean {
+    return !!sessionStorage.getItem('navigateFrom');
+  }
 }
