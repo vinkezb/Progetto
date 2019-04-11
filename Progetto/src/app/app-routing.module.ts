@@ -21,13 +21,13 @@ const routes: Routes = [
       { path: RoutingEnum.lista, component: ListComponent },
       { path: RoutingEnum.cards, component: CardsComponent, },
       { path: 'detail' + '/:itemId', component: DetailComponent },
-      { path: RoutingEnum.feedback, component: FeedbackComponent }
+      { path: RoutingEnum.feedback, component: FeedbackComponent },
     ],
     canActivateChild: [AuthGuard]
   },
   { path: RoutingEnum.home1, component: HomeComponent },
   { path: RoutingEnum.login, component: LoginComponent },
-  { path: RoutingEnum.register, component: RegisterComponent },
+  { path: RoutingEnum.register,component:RegisterComponent },
   { path: '', redirectTo: '/' + RoutingEnum.home1, pathMatch: 'full' },
   { path: '**', component: HomeComponent }
   

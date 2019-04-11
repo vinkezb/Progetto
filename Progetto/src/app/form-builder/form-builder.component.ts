@@ -44,13 +44,8 @@ ngOnInit() {  }
     }
   }
 
-  oLogin(){
-    //verificare che username € ai tuoi utenti e la psw corrispondang
-    //sessionStorage.setItem(this.myform.value.username,this.myform.value.password);
-    let result : boolean = this.loginService.Checkuser(this.myform.value.username,this.myform.value.password)
-    if (result){
+Register(){
+  this.router.navigateByUrl('/index/register')
+}
 
-      sessionStorage.setItem("chiave",this.myform.value.username);
-      this.router.navigateByUrl('/index/home');
-    }
-}}
+}
