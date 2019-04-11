@@ -19,8 +19,6 @@ import { DetailComponent } from './detail/detail.component';
 
 import { ProfileComponent } from './profile/profile.component';
 import { FooterComponent } from './footer/footer.component';
-import { FormComponent } from './form/form.component';
-import { FormGroupComponent } from './form-group/form-group.component';
 import { FormBuilderComponent } from './form-builder/form-builder.component';
 import { RegisterComponent } from './register/register.component';
 import { FormFeedbackComponent } from './form-feedback/form-feedback.component';
@@ -40,8 +38,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ProfileComponent,
     FooterComponent,
     
-    FormComponent,
-    FormGroupComponent,
     FormBuilderComponent,
     RegisterComponent,
     FormFeedbackComponent,

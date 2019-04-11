@@ -12,17 +12,17 @@ import { RoutingEnum } from './models/routing-enum';
 
 const routes: Routes = [{
   path: RoutingEnum.home, children: [
-    { path: RoutingEnum.home, component: HomeComponent},
     { path: RoutingEnum.lista, component: ListComponent },
     { path: RoutingEnum.cards, component: CardsComponent },
-    { path: RoutingEnum.feedback, component: FeedbackComponent },
     { path: 'detail' + '/:itemId', component: DetailComponent },
-    { path: 'profile', component: ProfileComponent },
-    { path: RoutingEnum.register, component: RegisterComponent }
   ]
+  
 },
-{path: RoutingEnum.home, component: HomeComponent},
-{ path: 'login', component: LoginComponent },];
+{ path: RoutingEnum.home1, component: HomeComponent},
+{ path: 'login', component: LoginComponent },
+{ path: RoutingEnum.register, component: RegisterComponent },
+{ path: RoutingEnum.feedback, component: FeedbackComponent },
+{ path: 'profile', component: ProfileComponent }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
