@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { RoutingEnum } from 'src/app/models/routing-enum';
+import { RoutingEnum } from '../Models/routing-enum';
 import { LoginServiceService } from '../Services/login-service.service';
+
 
 @Component({
   selector: 'app-form-builder',
@@ -11,12 +12,11 @@ import { LoginServiceService } from '../Services/login-service.service';
 })
 export class FormBuilderComponent implements OnInit {
   myform:FormGroup;
-psw:string;
    constructor( private fb:FormBuilder, private loginService: LoginServiceService, private router: Router) { 
 
    this.myform = this.fb.group({
     username :['', Validators.required],
-    psw :['',Validators.required],
+    password :['',Validators.required],
     email :['',Validators.required],
     telephone :['',Validators.required],
     nome:['',Validators.required],
@@ -33,12 +33,24 @@ ngOnInit() {  }
     console.log("function called");
   }
 
-
-  doLogin(username: string, password:string){
+  doLogin(){
     //verificare che username € ai tuoi utenti e la psw corrispondang
-    this.loginService.Checkuser(username,password)
-    
+    //sessionStorage.setItem(this.myform.value.username,this.myform.value.password);
+    let result : boolean = this.loginService.Checkuser(this.myform.value.username,this.myform.value.password)
+    if (result){
 
-    this.router.navigateByUrl('/index/');
+      sessionStorage.setItem("chiave",this.myform.value.username);
+      this.router.navigateByUrl('/index/home');
+    }
   }
-}
+
+  oLogin(){
+    //verificare che username € ai tuoi utenti e la psw corrispondang
+    //sessionStorage.setItem(this.myform.value.username,this.myform.value.password);
+    let result : boolean = this.loginService.Checkuser(this.myform.value.username,this.myform.value.password)
+    if (result){
+
+      sessionStorage.setItem("chiave",this.myform.value.username);
+      this.router.navigateByUrl('/index/home');
+    }
+}}

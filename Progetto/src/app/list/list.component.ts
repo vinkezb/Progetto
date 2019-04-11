@@ -47,7 +47,5 @@ export class ListComponent implements OnInit {
     item.isShown=false;
   }
 
-  canNavigateForward(): boolean {
-    return !!sessionStorage.getItem('navigateFrom');
-  }
+  canNavigateForward(){};
 }

@@ -1,17 +1,15 @@
-
-
 <div class="form-group">
     <form (ngSubmit)="Login()" [formGroup]="myform">
-            <img src="assets/images/armani-logo.png">
-            <h1>Registrati</h1>
-    <div class="textbox">
-        <input class="form-control" type='text' name='username' id='username' formControlName='username' required maxlength="16" placeholder="Username">
-        <div *ngIf="myform.controls['username'].invalid && (myform.controls['username'].dirty || myform.controls['username'].touched)" class="alert alert-danger">
-            <div *ngIf="myform.controls['username'].errors.required">
-                Username is required.
+        <img src="assets/images/armani-logo.png">
+        <h1>Registrati</h1>
+        <div class="textbox">
+            <input class="form-control" type='text' name='username' id='username' formControlName='username' required maxlength="16" placeholder="Username">
+            <div *ngIf="myform.controls['username'].invalid && (myform.controls['username'].dirty || myform.controls['username'].touched)" class="alert alert-danger">
+                <div *ngIf="myform.controls['username'].errors.required">
+                    Username is required.
+                </div>
             </div>
         </div>
-    </div>
         <div class="textbox">
             <input class="form-control" type='password' name='psw' id='psw' formControlName='psw' required maxlength="16" placeholder="Password">
             <div *ngIf="myform.controls['psw'].invalid && (myform.controls['psw'].dirty || myform.controls['psw'].touched)" class="alert alert-danger">
@@ -27,7 +25,9 @@
                     Email is required.
                 </div>
             </div>
-        </div>    
+        </div>
     </form>
+
     <button><a  routerLink="../register">Registrati</a></button>
+    <button type="button" (click)="doLogin(username.value, password.value)">Login</button>
 </div>
