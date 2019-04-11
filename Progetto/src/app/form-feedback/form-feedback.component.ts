@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class FormFeedbackComponent implements OnInit {
   myform:FormGroup;
-  constructor( private fb:FormBuilder) { 
+  constructor( private fb:FormBuilder, private router: Router) { 
 
   this.myform = this.fb.group({
    username :['', Validators.required],
@@ -19,9 +19,13 @@ export class FormFeedbackComponent implements OnInit {
    nome:['',Validators.required],
    cognome:['',Validators.required]
    })
-
     
    };
+   sendFeedback(){
+    //verificare che username € ai tuoi utenti e la psw corrispondang
+    this.router.navigateByUrl('/index/home');
+    window.alert("Feedback sent"); (4)
+  }
 
   ngOnInit() {
   }

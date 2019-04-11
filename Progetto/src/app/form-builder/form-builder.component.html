@@ -11,7 +11,7 @@
             </div>
         </div>
         <div class="textbox">
-            <input class="form-control" [(ngModel)]="password" type='password' name='psw' id='psw' formControlName='psw' required maxlength="16" placeholder="Password">
+            <input class="form-control" [(ngModel)]="password" type='password' name='password' id='password' formControlName='password' required maxlength="16" placeholder="Password">
             <div *ngIf="myform.controls['psw'].invalid && (myform.controls['psw'].dirty || myform.controls['psw'].touched)" class="alert-danger">
                 <div *ngIf="myform.controls[ 'psw'].errors.required ">
                     Password is required.
@@ -19,7 +19,7 @@
             </div>
         </div>
     </form>
-    <button type="button" (click)="doLogin(username.value, password.value)">Login</button>
+    <button type="button" (click)="doLogin(username, password)">Login</button>
 
-    <a routerLink="/register"><button>Registrati</button></a>
+    <a routerLink="/register"><button (click)="doRegister(username, password,nome,cognome)">Registrati</button></a>
 </div>
