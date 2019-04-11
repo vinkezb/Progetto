@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 title = sessionStorage.getItem("chiave");
+nome = sessionStorage.getItem("chiave");
+email= sessionStorage.getItem("chiave");
+cognome="rossi";
+sesso="maschio";
 
   constructor() { }
 
