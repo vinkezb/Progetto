@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from '../menu-item';
-import { RoutingEnum } from 'src/app/models/routing-enum';
+import { RoutingEnum } from '../Models/routing-enum';
 
 @Component({
   selector: 'app-menu',
@@ -13,8 +13,9 @@ export class MenuComponent implements OnInit {
     {id:2, description: 'Lista', selected: false, endpoint: '/'+ RoutingEnum.home +'/'+ RoutingEnum.lista  },
     {id:3, description: 'Cards', selected: false, endpoint: '/'+ RoutingEnum.home +'/'+ RoutingEnum.cards  },
     {id:4, description: 'Feedback', selected: false, endpoint: '/'+ RoutingEnum.home +'/'+ RoutingEnum.feedback  },
-    {id:5, description: 'Login', selected: false, endpoint:'/'+ RoutingEnum.login },
+   //{id:5, description: 'Login', selected: false, endpoint:'/'+ RoutingEnum.login },
     {id:6, description: 'Profilo', selected: false, endpoint: '/'+ RoutingEnum.home + '/'+ RoutingEnum.profile },
+    
      ]
 
   constructor() { }
