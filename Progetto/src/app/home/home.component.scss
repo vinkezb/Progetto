@@ -1,12 +1,12 @@
 @import "../../assets/scss/mixins";
 
-p{
-    color: rgb(255, 255, 255);
+.carousel{
+    color:white;
     font-size:25px;
     text-align: center;
 }
 
-.container2{
+.carousel-home{
     @include display-grid((1fr 1fr), (100px 1fr));
     margin-left: 50px;
 
@@ -19,7 +19,7 @@ p{
     @include grid-row(1);
 }
 
-#text{
+#text-carousel{
     @include grid-column(1);
     @include grid-row(2);
     text-align: left;
