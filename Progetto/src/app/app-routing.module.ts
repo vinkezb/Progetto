@@ -17,7 +17,7 @@ const routes: Routes = [
   {
     path: RoutingEnum.home,
     children: [
-      { path: 'profile', component: ProfileComponent },
+     
       { path: RoutingEnum.lista, component: ListComponent },
       { path: RoutingEnum.cards, component: CardsComponent, },
       { path: 'detail' + '/:itemId', component: DetailComponent },
@@ -29,7 +29,8 @@ const routes: Routes = [
   { path: RoutingEnum.login, component: LoginComponent },
   { path: RoutingEnum.register, component: RegisterComponent },
   { path: '', redirectTo: '/' + RoutingEnum.home1, pathMatch: 'full' },
-  { path: '**', component: HomeComponent }
+  { path: '**', component: HomeComponent },
+  { path: 'profile', component: ProfileComponent },
 ];
 
 @NgModule({
