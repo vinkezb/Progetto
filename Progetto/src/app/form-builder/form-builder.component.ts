@@ -11,7 +11,7 @@ import { LoginServiceService } from '../Services/login-service.service';
 })
 export class FormBuilderComponent implements OnInit {
   myform:FormGroup;
-psw:string;
+  psw:string;
    constructor( private fb:FormBuilder, private loginService: LoginServiceService, private router: Router) { 
 
    this.myform = this.fb.group({
