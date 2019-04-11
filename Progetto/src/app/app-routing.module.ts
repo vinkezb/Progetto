@@ -30,6 +30,7 @@ const routes: Routes = [
   { path: RoutingEnum.register, component: RegisterComponent },
   { path: '', redirectTo: '/' + RoutingEnum.home1, pathMatch: 'full' },
   { path: '**', component: HomeComponent }
+  
 ];
 
 @NgModule({
