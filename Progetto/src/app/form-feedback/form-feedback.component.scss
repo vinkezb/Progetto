@@ -67,6 +67,10 @@ textarea{
     color: white;
 }
 
+:-ms-input-placeholder{
+    color: white;
+}
+
 button{
     margin-bottom: 5px;
     margin-top:5px;
@@ -76,7 +80,7 @@ button{
     border-radius: 15px;
     color: white;
     width: 40%;
-    font-size: 20px;
+    font-size: 15px;
 
 }
 
